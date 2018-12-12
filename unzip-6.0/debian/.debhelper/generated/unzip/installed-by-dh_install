@@ -1,0 +1,6 @@
+debian/tmp/usr/bin/funzip
+debian/tmp/usr/bin/unzip
+debian/tmp/usr/bin/unzipsfx
+debian/tmp/usr/bin/zipgrep
+debian/tmp/usr/bin/zipinfo
+debian/tmp/usr/man/man1

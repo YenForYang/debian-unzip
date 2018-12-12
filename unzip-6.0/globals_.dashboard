@@ -1,0 +1,12 @@
+{
+    "driver_name" : "icc",
+    "options" : [ "-I.", "-march=native", "-parallel", "-inline-level=2", "-qemit-build-options", "-qemit-messages", "-multiple-processes=8", "-qoverride-limits", "-falign-loops", "-falign-functions", "-qopt-matmul", "-qopt-mem-layout-trans", "-fpermissive", "-ipo-jobs4", "-Wl,--as-needed,--gc-sections,--print-gc-sections,--print-memory-usage,--relax,--stats", "-ffunction-sections", "-fdata-sections", "-diag-disable=10148,10006,10121,11021", "-par-schedule-auto", "-ipo", "-c", "-g", "-O2", "-fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=.", "-fstack-protector-strong", "-march=native", "-pipe", "-Wall", "-Wdate-time", "-D_FORTIFY_SOURCE=2", "-DACORN_FTYPE_NFS", "-DWILD_STOP_AT_DIR", "-DLARGE_FILE_SUPPORT", "-DUNICODE_SUPPORT", "-DUNICODE_WCHAR", "-DUTF8_MAYBE_NATIVE", "-DNO_LCHMOD", "-DDATE_FORMAT=DF_YMD", "-DUSE_BZIP2", "-DIZ_HAVE_UXUIDGID", "-DNOMEMCPY", "-DNO_WORKING_ISPRINT", "-DSFX", "-o", "globals_.o" ],
+    "objects" : [
+        {
+            "object_name" : "globals_.o",
+            "source_name" : "globals.c",
+            "start_time" : "2018-12-02T05:48:10Z",
+            "end_time" : "2018-12-02T05:48:10Z"
+        }
+    ]
+}

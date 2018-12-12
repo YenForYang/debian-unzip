@@ -1,0 +1,313 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck
+dpkg-buildpackage: info: source package unzip
+dpkg-buildpackage: info: source version 6.0-21
+dpkg-buildpackage: info: source distribution unstable
+dpkg-buildpackage: info: source changed by Santiago Vila <sanvila@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ fakeroot debian/rules clean
+dh clean
+   debian/rules override_dh_auto_clean
+make[1]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+/usr/bin/make -f unix/Makefile clean
+make[2]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+
+         This is a Unix-specific target.  (Just so you know.)
+
+( cd bzip2; /usr/bin/make -f Makebz2.iz RM="rm -f" clean )
+make[3]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/bzip2'
+rm -f blocksort.o huffman.o crctable.o randtable.o compress.o decompress.o bzlib.o libbz2.a
+make[3]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/bzip2'
+rm -f unzip funzip unzipsfx unzip.o crc32.o  crypt.o envargs.o explode.o extract.o fileio.o globals.o inflate.o list.o match.o process.o ttyio.o ubz2err.o unreduce.o unshrink.o zipinfo.o unix.o funzip.o crc32.o  cryptf.o globalsf.o inflatef.o ttyiof.o unzipsfx.o crc32_.o  crypt_.o extract_.o fileio_.o globals_.o inflate_.o match_.o process_.o ttyio_.o ubz2err_.o unix_.o api.o apihelp.o crc_gcc.o \
+  crc_sysv.o unzipstb.o crypt_.c extract_.c globals_.c inflate_.c \
+  ttyio_.c crc_i386s.s msdos_.c process_.c unix_.c unzipsfx.c
+rm -f flags
+rm -rf ./IZunzip
+make[2]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+make[1]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+   dh_clean
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ debian/rules build
+dh build
+   dh_update_autotools_config
+   debian/rules override_dh_auto_build
+make[1]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+/usr/bin/make -f unix/Makefile D_USE_BZ2=-DUSE_BZIP2 L_BZ2=-lbz2 \
+	CC="icc" LF2="`dpkg-buildflags --get LDFLAGS`" \
+	CF="`dpkg-buildflags --get CFLAGS` -Wall `dpkg-buildflags --get CPPFLAGS` -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT" unzips
+make[2]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT unzip.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT crc32.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT crypt.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT envargs.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT explode.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT extract.c
+extract.c(617): warning #2218: result of call is not used
+          read(G.zipfd, (char *)G.inbuf, INBUFSIZ);  /* been here before... */
+          ^
+
+extract.c(929): warning #2218: result of call is not used
+              fgets(G.answerbuf, sizeof(G.answerbuf), stdin);
+              ^
+
+extract.c(1514): warning #2218: result of call is not used
+                              fgets(G.filename, FILNAMSIZ, stdin);
+                              ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT fileio.c
+fileio.c(1223): warning #2218: result of call is not used
+      fgets(G.answerbuf, sizeof(G.answerbuf), stdin);
+      ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT globals.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT inflate.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT list.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT match.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT process.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT ttyio.c
+ttyio.c(463): warning #2218: result of call is not used
+      read(f, &c, 1);             /* read our character */
+      ^
+
+ttyio.c(631): warning #2218: result of call is not used
+              read(f, &c, 1);
+              ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT ubz2err.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT unreduce.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT unshrink.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT zipinfo.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT unix/unix.c
+icc -o unzip  -Lbzip2 unzip.o crc32.o  crypt.o envargs.o explode.o extract.o fileio.o globals.o inflate.o list.o match.o process.o ttyio.o ubz2err.o unreduce.o unshrink.o zipinfo.o unix.o -lbz2 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--print-gc-sections,--print-memory-usage,--stats
+ld: removing unused section '.rodata.cst4' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.data' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.text.globalsCtor' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.zstrnicmp' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.free_crc_table' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.crc32' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.undefer_input' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.defer_leftover_input' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.readbyte' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.str2oem' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.decrypt_byte' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.update_keys' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.flush' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.rodata.flush' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.huft_free' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.process_cdir_file_hdr' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.readbuf' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.fillinbuf' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.check_for_newer' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.makeword' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.makelong' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.inflate' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.checkdir' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.defer_dir_attribs' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.set_direc_attribs' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.find_compr_idx' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.memflush' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.extract_izvms_block' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.ef_scan_for_izux' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.utf8_to_local_string' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.Echon' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.zgetch' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.getp' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.makeint64' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.ratio' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.fnprint' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.iswild' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.stamp_file' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.free_G_buffers' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.data..2.307_2_hpo_loc_struct_pack.11' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.data..2.307_2__hpo_loc_pack.10' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.wide_to_escape_string' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.getRISCOSexfield' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.Echoff' in file '/tmp/ipo_iccS062Vk.o'
+ld: removing unused section '.text.bz_internal_error' in file '/tmp/ipo_iccS062Vk.o'
+Memory region         Used Size  Region Size  %age Used
+ld: total time in link: 0.172570
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT funzip.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DFUNZIP -o cryptf.o crypt.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DFUNZIP -o globalsf.o globals.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DFUNZIP -o inflatef.o inflate.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DFUNZIP -o ttyiof.o ttyio.c
+ttyio.c(631): warning #2218: result of call is not used
+              read(f, &c, 1);
+              ^
+
+icc -o funzip  funzip.o crc32.o  cryptf.o globalsf.o inflatef.o ttyiof.o -Wl,-z,relro -Wl,--as-needed,--gc-sections,--print-gc-sections,--print-memory-usage,--stats
+ld: removing unused section '.rodata.cst4' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.data' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.text.globalsCtor' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.inflate' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.crc32' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.decrypt_byte' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.update_keys' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.getp' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.free_crc_table' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.huft_free' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.Echoff' in file '/tmp/ipo_iccHhKXSL.o'
+ld: removing unused section '.text.Echon' in file '/tmp/ipo_iccHhKXSL.o'
+Memory region         Used Size  Region Size  %age Used
+ld: total time in link: 0.134102
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o unzipsfx.o unzip.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o crc32_.o crc32.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o crypt_.o crypt.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o extract_.o extract.c
+extract.c(617): warning #2218: result of call is not used
+          read(G.zipfd, (char *)G.inbuf, INBUFSIZ);  /* been here before... */
+          ^
+
+extract.c(929): warning #2218: result of call is not used
+              fgets(G.answerbuf, sizeof(G.answerbuf), stdin);
+              ^
+
+extract.c(1514): warning #2218: result of call is not used
+                              fgets(G.filename, FILNAMSIZ, stdin);
+                              ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o fileio_.o fileio.c
+fileio.c(1223): warning #2218: result of call is not used
+      fgets(G.answerbuf, sizeof(G.answerbuf), stdin);
+      ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o globals_.o globals.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o inflate_.o inflate.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o match_.o match.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o process_.o process.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o ttyio_.o ttyio.c
+ttyio.c(463): warning #2218: result of call is not used
+      read(f, &c, 1);             /* read our character */
+      ^
+
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o ubz2err_.o ubz2err.c
+icc -c -g -O2 -fdebug-prefix-map=/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0=. -fstack-protector-strong -march=native -pipe -Wall -Wdate-time -D_FORTIFY_SOURCE=2 -I. -DACORN_FTYPE_NFS -DWILD_STOP_AT_DIR -DLARGE_FILE_SUPPORT -DUNICODE_SUPPORT -DUNICODE_WCHAR -DUTF8_MAYBE_NATIVE -DNO_LCHMOD -DDATE_FORMAT=DF_YMD -DUSE_BZIP2 -DIZ_HAVE_UXUIDGID -DNOMEMCPY -DNO_WORKING_ISPRINT -DSFX -o unix_.o unix/unix.c
+icc -o unzipsfx  unzipsfx.o crc32_.o  crypt_.o extract_.o fileio_.o globals_.o inflate_.o match_.o process_.o ttyio_.o ubz2err_.o unix_.o -Wl,-z,relro -Wl,--as-needed,--gc-sections,--print-gc-sections,--print-memory-usage,--stats
+ld: removing unused section '.rodata.cst4' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.data' in file '/usr/lib/gcc/x86_64-linux-gnu/8/../../../x86_64-linux-gnu/Scrt1.o'
+ld: removing unused section '.text.globalsCtor' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.free_crc_table' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.crc32' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.process_cdir_file_hdr' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.undefer_input' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.defer_leftover_input' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.readbuf' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.readbyte' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.flush' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.check_for_newer' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.do_string' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.rodata.do_string' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.makeword' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.makelong' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.fzofft' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.inflate' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.checkdir' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.defer_dir_attribs' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.set_direc_attribs' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.memextract' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.rodata.BadExtraFieldCRC' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.rodata.UnsupportedExtraField' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.memflush' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.ef_scan_for_izux' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.utf8_to_local_string' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.Echon' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.zgetch' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.makeint64' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.zstrnicmp' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.huft_free' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.iswild' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.wide_to_escape_string' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.getRISCOSexfield' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.text.Echoff' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.rodata.TruncEAs' in file '/tmp/ipo_iccBuaG4W.o'
+ld: removing unused section '.rodata.TruncNTSD' in file '/tmp/ipo_iccBuaG4W.o'
+Memory region         Used Size  Region Size  %age Used
+ld: total time in link: 0.151295
+make[2]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+make[1]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+ fakeroot debian/rules binary
+dh binary
+   dh_testroot
+   dh_prep
+   debian/rules override_dh_auto_install
+make[1]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+/usr/bin/make -f unix/Makefile install prefix=`pwd`/debian/tmp/usr
+make[2]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+mkdir -p /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin
+cp unzip funzip unzipsfx /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin
+cp unix/zipgrep /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin
+rm -f /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/zipinfo
+ln /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/unzip /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/zipinfo
+mkdir -p /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1
+cp man/funzip.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/funzip.1
+cp man/unzip.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/unzip.1
+cp man/unzipsfx.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/unzipsfx.1
+cp man/zipgrep.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/zipgrep.1
+cp man/zipinfo.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/zipinfo.1
+chmod 755 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/funzip /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/unzip /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/unzipsfx /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/zipgrep /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/bin/zipinfo
+chmod 644 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/funzip.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/unzip.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/unzipsfx.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/zipgrep.1 /home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0/debian/tmp/usr/man/man1/zipinfo.1
+make[2]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+make[1]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installman
+   dh_installmime
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   debian/rules override_dh_compress
+make[1]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+dh_compress -XBUGS -XToDo
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+make[1]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+   dh_fixperms
+   dh_missing
+   debian/rules override_dh_strip
+make[1]: Entering directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+dh_strip
+objcopy: debian/unzip/usr/bin/stdqHPNh: debuglink section already exists
+cd debian/unzip/usr/bin && rm -f zipinfo && ln unzip zipinfo
+make[1]: Leaving directory '/home/richard/debs/pythonstuff/python-setuptools/unzip/unzip-6.0'
+   dh_makeshlibs
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   dh_shlibdeps
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: can't extract name and version from library name 'libiomp5.so'
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/unzip/usr/bin/funzip debian/unzip/usr/bin/unzipsfx debian/unzip/usr/bin/unzip debian/unzip/usr/bin/zipinfo were not linked against libgcc_s.so.1 (they use none of the library's symbols)
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/unzip/usr/bin/funzip debian/unzip/usr/bin/unzipsfx debian/unzip/usr/bin/unzip debian/unzip/usr/bin/zipinfo were not linked against libdl.so.2 (they use none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+ERROR: ld.so: object 'libfakeroot-sysv.so' from LD_PRELOAD cannot be preloaded (cannot open shared object file): ignored.
+   dh_builddeb
+dpkg-deb: building package 'unzip' in '../unzip_6.0-21_amd64.deb'.
+dpkg-deb: building package 'unzip-dbgsym' in '../unzip-dbgsym_6.0-21_amd64.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../unzip_6.0-21_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian unzip_6.0-21_amd64.changes ...
+W: unzip: hardening-no-pie usr/bin/funzip
+W: unzip: hardening-no-pie usr/bin/unzip
+W: unzip: hardening-no-pie usr/bin/unzipsfx
+W: unzip: hardening-no-pie usr/bin/zipinfo
+W: unzip: manpage-has-errors-from-man usr/share/man/man1/zipinfo.1.gz 349: warning: macro `mF' not defined
+Finished running lintian.

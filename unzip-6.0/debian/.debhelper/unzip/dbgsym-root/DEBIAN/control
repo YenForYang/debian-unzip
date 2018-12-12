@@ -1,0 +1,12 @@
+Package: unzip-dbgsym
+Source: unzip
+Version: 6.0-21
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: Santiago Vila <sanvila@debian.org>
+Installed-Size: 261
+Depends: unzip (= 6.0-21)
+Section: debug
+Priority: optional
+Description: debug symbols for unzip
+Build-Ids: 4be7ea5c905b8b5847c3a5d9cca109f9b070ae2f 51c33a313799031a4c8d956bdb365cc612a787b4 9bb2715b6905ff0dd5a707b569ffe906a35fe8ef

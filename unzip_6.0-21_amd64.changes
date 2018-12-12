@@ -1,0 +1,41 @@
+Format: 1.8
+Date: Sun, 11 Dec 2016 21:03:30 +0100
+Source: unzip
+Binary: unzip
+Built-For-Profiles: nobiarch nocheck
+Architecture: amd64
+Version: 6.0-21
+Distribution: unstable
+Urgency: medium
+Maintainer: Santiago Vila <sanvila@debian.org>
+Changed-By: Santiago Vila <sanvila@debian.org>
+Description:
+ unzip      - De-archiver for .zip files
+Closes: 836051 842993 847485 847486
+Changes:
+ unzip (6.0-21) unstable; urgency=medium
+ .
+   * Rename all debian/patches/* to have .patch ending.
+   * Update 12-cve-2014-9636-test-compr-eb.patch to follow revised
+     patch "unzip-6.0_overflow3.diff" from mancha (patch author).
+     Update also to follow upstream coding style.
+   * Drop workaround for gcc optimization bug on ARM (GCC Bug #764732)
+     in the hope that it's not present anymore in GCC-6.
+   * Allow source to be cross-built. Closes: #836051.
+   * Do not ignore Unix Timestamps. Closes: #842993. Patch by the author.
+   * Fix CVE-2014-9913, buffer overflow in unzip. Closes: #847485.
+     Patch by the author.
+   * Fix CVE-2016-9844, buffer overflow in zipinfo. Closes: #847486.
+     Patch by the author.
+Checksums-Sha1:
+ 9ab209da8fddb564d94b03d81647818f1c15fba6 199204 unzip-dbgsym_6.0-21_amd64.deb
+ 87918fb4bdca266b0532a8ad929952095fff3a36 5350 unzip_6.0-21_amd64.buildinfo
+ c4f238b8ad01c69fc4d05201875eb405b72063ed 221552 unzip_6.0-21_amd64.deb
+Checksums-Sha256:
+ 78bcde95f6e612062dbc227b8c38e893254ad241fa52ee9fd6717cea5ec39eae 199204 unzip-dbgsym_6.0-21_amd64.deb
+ 3b1c8978eb47583e5c42bc0e198ebb158a88d9d630f68f29fb7e6296ccbcb497 5350 unzip_6.0-21_amd64.buildinfo
+ f9830595ab99d43da3e8e54ac957fecbed9cc5920eded2e5a20963138589352d 221552 unzip_6.0-21_amd64.deb
+Files:
+ bb7b7bdee8c3c3b0665c6fbfcfd2acb1 199204 debug optional unzip-dbgsym_6.0-21_amd64.deb
+ 361207eca93130def66da903db2f0213 5350 utils optional unzip_6.0-21_amd64.buildinfo
+ 84ca0fba49763417281efe025bc4f11b 221552 utils optional unzip_6.0-21_amd64.deb
